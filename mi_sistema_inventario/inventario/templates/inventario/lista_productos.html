@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+
+    <p><a href="{% url 'agregar_producto' %}">Agregar Nuevo Producto</a></p>
+
+    {% if productos %}
+        <ul>
+            {% for producto in productos %}
+                <li>{{ producto.nombre }} - Precio: {{ producto.precio_venta }} - Stock: {{ producto.stock }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay productos disponibles en este momento.</p>
+    {% endif %}
+
+</body>
+</html>

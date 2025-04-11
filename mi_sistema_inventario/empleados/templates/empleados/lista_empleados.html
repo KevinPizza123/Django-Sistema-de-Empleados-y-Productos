@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Empleados</title>
+</head>
+<body>
+    <h1>Lista de Empleados</h1>
+    <p>Esta es la página para mostrar la lista de empleados.</p>
+
+    {% if empleados %}
+        <ul>
+            {% for empleado in empleados %}
+                <li>Nombre: {{ empleado.nombre }}</li>
+                <li>Apellido: {{ empleado.apellido }}</li>
+                <li>Cédula: {{ empleado.numero_de_cedula }}</li>
+                <li>Correo: {{ empleado.correo }}</li>
+                <hr>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay empleados registrados.</p>
+    {% endif %}
+</body>
+</html>
