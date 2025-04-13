@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class PerfilEmpleado(models.Model):
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+    #usuario = models.OneToOneField(User, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     numero_de_cedula = models.CharField(max_length=20, unique=True)  # Asumiendo que la cédula es única
